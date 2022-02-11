@@ -18,8 +18,9 @@
 
 	accounts.email.accounts.primary = {
 		address = "david.mohar@shekaj.si";
-		primary = true;
 		realName = "David Mohar";
+
+		primary = true;
 	};
 
 	programs.ssh.enable = true;

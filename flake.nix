@@ -32,7 +32,6 @@
           }
           ./modules/common.nix
           ./modules/nix.nix
-          ./modules/homebrew.nix
           (./machines + "/${hostname}/configuration.nix")
         ];
       };
