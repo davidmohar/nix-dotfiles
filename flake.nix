@@ -40,6 +40,7 @@
     {
       darwinConfigurations = {
         "jabuk" = mkDarwin "jabuk";
+        "lju1-dmohar" = mkDarwin "lju1-dmohar";
       };
     };
 }
