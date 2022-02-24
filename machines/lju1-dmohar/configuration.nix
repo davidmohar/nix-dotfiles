@@ -1,14 +1,14 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, nix-darwin, home-manager, ... }:
 let
   username = "d.mohar";
 in
 {
-	system.stateVersion = 4;
 	networking.hostName = "LJU1-dmohar";
 
 	services.nix-daemon.enable = true;
 	security.pam.enableSudoTouchIdAuth = true;
 
+	programs.zsh.enable = true;
 	environment.shells = with pkgs; [ zsh ];
 	environment.systemPackages = with pkgs; [
 		nixfmt

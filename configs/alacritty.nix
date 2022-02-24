@@ -11,6 +11,7 @@
 			mouse.hide_when_typing = true;
 			use_thin_strokes = true;
 			cursor.style = "Beam";
+			window.opacity = 0.9;
 
 			font = {
 				size = 10;

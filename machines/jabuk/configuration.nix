@@ -1,14 +1,14 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, nix-darwin, home-manager, ...}:
 let
   username = "davidm";
 in
 {
-	system.stateVersion = 4;
 	networking.hostName = "jabuk";
 
 	services.nix-daemon.enable = true;
 	security.pam.enableSudoTouchIdAuth = true;
 
+	programs.zsh.enable = true;
 	environment.shells = with pkgs; [ zsh ];
 	environment.systemPackages = with pkgs; [
 		nixfmt
@@ -25,6 +25,7 @@ in
 			"alacritty"
 			"visual-studio-code"
 			"rectangle"
+			"firefox"
 		];
 	};
 

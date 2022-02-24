@@ -13,7 +13,7 @@
 	];
 
 	home.packages = with pkgs; [
-
+		kubectl
 	];
 
 	accounts.email.accounts.primary = {

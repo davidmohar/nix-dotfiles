@@ -30,8 +30,6 @@
               useUserPackages = true;
             };
           }
-          ./modules/common.nix
-          ./modules/nix.nix
           (./machines + "/${hostname}/configuration.nix")
         ];
       };
