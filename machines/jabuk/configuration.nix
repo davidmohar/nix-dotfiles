@@ -26,6 +26,7 @@ in
 			"visual-studio-code"
 			"rectangle"
 			"firefox"
+			"steam"
 		];
 	};
 
