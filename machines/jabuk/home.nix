@@ -14,6 +14,10 @@
 
 	home.packages = with pkgs; [
 		kubectl
+		# Rust
+		rustc
+		cargo
+		rustfmt
 	];
 
 	accounts.email.accounts.primary = {
