@@ -18,6 +18,8 @@
 		rustc
 		cargo
 		rustfmt
+
+		hugo
 	];
 
 	accounts.email.accounts.primary = {

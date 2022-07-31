@@ -12,6 +12,7 @@ in
 	environment.shells = with pkgs; [ zsh ];
 	environment.systemPackages = with pkgs; [
 		nixfmt
+		direnv
 	];
 
 	homebrew = {
@@ -35,4 +36,6 @@ in
 		home = "/Users/${username}";
 		shell = pkgs.zsh;
 	};
+
+	nixpkgs.config.allowBroken = true;
 }
