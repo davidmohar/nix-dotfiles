@@ -27,4 +27,6 @@ in
 			bindkey -e
 		'';
 	};
+
+	programs.tmux.enable = true;
 }
