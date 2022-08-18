@@ -3,6 +3,7 @@
 		enable = true;
 		clock24 = true;
 		tmuxp.enable = true;
+		
 		plugins = with pkgs; [
 			{
 				plugin = tmuxPlugins.power-theme;
