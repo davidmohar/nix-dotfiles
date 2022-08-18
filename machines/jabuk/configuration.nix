@@ -16,6 +16,13 @@ in
 	];
 
 	homebrew = {
+		enable = true;
+		autoUpdate = true;
+
+		brews = [
+			"pam-reattach"
+		];
+
 		taps = [
 			"homebrew/core"
 			"homebrew/cask"
