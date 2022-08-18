@@ -10,6 +10,7 @@
 		../../configs/neovim.nix
 		../../configs/starship.nix
 		../../configs/zsh.nix
+		../../configs/tmux.nix
 	];
 
 	home.packages = with pkgs; [
