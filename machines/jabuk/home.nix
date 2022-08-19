@@ -19,6 +19,8 @@
 		rustc
 		cargo
 		rustfmt
+		# nvim coc
+		nodejs
 	];
 
 	accounts.email.accounts.primary = {
