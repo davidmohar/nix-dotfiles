@@ -35,6 +35,8 @@ in
 			"rectangle"
 			"firefox"
 			"steam"
+			"bitwarden"
+			"discord"
 		];
 	};
 
