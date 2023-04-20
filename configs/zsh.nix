@@ -10,7 +10,7 @@
 		shellAliases = {
 			grep = "grep --color=auto";
 			ll = "ls -l";
-			bla = "cat";
+			cat = "bat";
 
 			# zsh reload
 			szsh = "source ~/.zshrc";
@@ -22,7 +22,6 @@
 		initExtra = ''
 			export TERM="xterm-256color"
 			bindkey -e
-			echo "hello!"
 		'';
 	};
 
