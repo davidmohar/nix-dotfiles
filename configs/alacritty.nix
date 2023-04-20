@@ -22,6 +22,10 @@
 				italic.family = "Fira Code";
 				italic.style = "Light";
 			};
+
+			shell = {
+				program = "tmux";
+			};
 		};
 	};
 }

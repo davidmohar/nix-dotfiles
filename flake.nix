@@ -28,7 +28,7 @@
         modules = [
           ./modules/darwin.nix
           ./modules/pam.nix
-          home-manager.darwinModule
+          home-manager.darwinModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
@@ -36,36 +36,6 @@
             };
           }
           (./machines + "/${hostname}/configuration.nix")
-          ({ config, pkgs, lib, ... }: {
-            nixpkgs = {
-              overlays = with inputs; [
-                (final: prev: {
-                  yabai =
-                    let
-                      version = "4.0.0-master";
-                      buildSymlinks = prev.runCommand "build-symlinks" { } ''
-                        mkdir -p $out/bin
-                        ln -s /usr/bin/xcrun /usr/bin/xcodebuild /usr/bin/tiffutil /usr/bin/qlmanage $out/bin
-                      '';
-                    in
-                      prev.yabai.overrideAttrs (old: {
-                        inherit version;
-                        src = inputs.yabai-src;
-
-                        buildInputs = with prev.darwin.apple_sdk.frameworks; [
-                          Carbon
-                          Cocoa
-                          ScriptingBridge
-                          prev.xxd
-                          SkyLight
-                        ];
-
-                        nativeBuildInputs = [ buildSymlinks ];
-                      });
-                })
-              ];
-            };
-          })
         ];
       };
     in

@@ -1,20 +1,5 @@
-{ pkgs, ... }:
-let
-	shellAliases = {
-		grep = "grep --color=auto";
-		ll = "ls -l";
-
-		# zsh reload
-		szsh = "source ~/.zshrc";
-
-		# Nix garbage collection
-		garbage = "nix-collect-garbage -d";
-	};
-in
-{
+{ pkgs, ... }: {
 	programs.zsh = {
-		inherit shellAliases;
-
 		enable = true;
 		enableAutosuggestions = true;
 		enableSyntaxHighlighting = true;
@@ -22,11 +7,24 @@ in
 		
 		history.extended = true;
 
+		shellAliases = {
+			grep = "grep --color=auto";
+			ll = "ls -l";
+			bla = "cat";
+
+			# zsh reload
+			szsh = "source ~/.zshrc";
+
+			# Nix garbage collection
+			garbage = "nix-collect-garbage -d";
+		};
+
 		initExtra = ''
 			export TERM="xterm-256color"
 			bindkey -e
+			echo "hello!"
 		'';
 	};
 
-	programs.tmux.enable = true;
+	programs.bat.enable = true;
 }

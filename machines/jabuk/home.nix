@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-	home.stateVersion = "21.11";
+	home.stateVersion = "22.05";
 
 	imports = [
 		../../configs/alacritty.nix
@@ -21,6 +21,8 @@
 		rustfmt
 		# nvim coc
 		nodejs
+		# develop
+		terraform
 	];
 
 	accounts.email.accounts.primary = {

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nix-darwin, home-manager, ...}:
+{ pkgs, home-manager, ... }:
 let
   username = "davidm";
 in
@@ -21,6 +21,7 @@ in
 
 		brews = [
 			"pam-reattach"
+			"ext4fuse"
 		];
 
 		taps = [
@@ -37,12 +38,16 @@ in
 			"steam"
 			"bitwarden"
 			"discord"
+			"wireshark"
+			"macfuse"
+			"raspberry-pi-imager"
+			"adobe-acrobat-reader"
+			"foxitreader"
 		];
 	};
-
 	home-manager.users."${username}" = import ./home.nix;
 	users.users."${username}" = {
-		home = "/Users/${username}";
+		#home = "/Users/${username}";
 		shell = pkgs.zsh;
 	};
 
@@ -110,15 +115,15 @@ in
 			alt + ctrl - q : yabai -m space --focus prev
 			alt + ctrl - e : yabai -m space --focus next
 
-      ralt - x : yabai -m space --focus recent
-      ralt - 1 : yabai -m space --focus 1
-      ralt - 2 : yabai -m space --focus 2
-      ralt - 3 : yabai -m space --focus 3
-      ralt - 4 : yabai -m space --focus 4
-      ralt - 5 : yabai -m space --focus 5
-      ralt - 6 : yabai -m space --focus 6
-      ralt - 7 : yabai -m space --focus 7
-      ralt - 8 : yabai -m space --focus 8
+			ralt - x : yabai -m space --focus recent
+			ralt - 1 : yabai -m space --focus 1
+			ralt - 2 : yabai -m space --focus 2
+			ralt - 3 : yabai -m space --focus 3
+			ralt - 4 : yabai -m space --focus 4
+			ralt - 5 : yabai -m space --focus 5
+			ralt - 6 : yabai -m space --focus 6
+			ralt - 7 : yabai -m space --focus 7
+			ralt - 8 : yabai -m space --focus 8
 
 			# float / unfloat window
 			ralt - t : yabai -m window --toggle float;\
